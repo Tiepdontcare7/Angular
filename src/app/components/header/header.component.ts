@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-
+  title: string = 'hello world';
+  // changeInput(event: Event) {
+  //   this.title = (event.target as HTMLInputElement).value
+  // }
 }
