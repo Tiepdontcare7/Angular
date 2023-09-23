@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class SearchBoxPipe implements PipeTransform {
 
   transform(data: IProduct[], searchText: string): IProduct[] {
-    return data.filter(item => item.name.toLowerCase().includes(searchText.toLowerCase()));
+    return data?.filter(item => item.name.toLowerCase().includes(searchText.toLowerCase()));
   }
 
 }

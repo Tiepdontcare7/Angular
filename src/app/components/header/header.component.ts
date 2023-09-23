@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -10,4 +10,10 @@ export class HeaderComponent {
   // changeInput(event: Event) {
   //   this.title = (event.target as HTMLInputElement).value
   // }
+
+  @Input() products!: IProduct[];
+  @Output() onRemove = new EventEmitter()
+  onClick(id:any) {
+    this.onRemove.emit(id);
+  }
 }

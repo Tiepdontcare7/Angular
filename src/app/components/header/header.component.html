@@ -1,3 +1,10 @@
 <!-- <input (keyup)="changeInput($event)" type="text"> -->
 <input [(ngModel)]="title" type="text">
 <p>{{title}}</p>
+
+<!-- <p>{{products}}</p> -->
+<tbody>
+  <tr *ngFor="let item of products, index as i">
+    <td>{{item.name}}</td>
+</tbody>
+
